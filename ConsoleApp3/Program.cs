@@ -5,16 +5,21 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("pls enter student Deptname ");
-            string dept_name = Console.ReadLine();
-            Console.WriteLine("pls enter student Name ");
-            string name = Console.ReadLine();
-            Console.WriteLine("pls enter student id ");
-            int id = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("pls enter student age ");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"student_Deptname : {dept_name} , his name : {name} , his id  {id} and his age {age} ");
-
+            int SSN;
+            string name;
+            double salary;
+            int age;
+            do
+            {
+                Console.WriteLine("pls Enter Employee SSN");
+                SSN = int.Parse(Console.ReadLine());
+                Console.WriteLine("pls Enter Employee Name");
+                name = Console.ReadLine();
+                Console.WriteLine("pls Enter Employee Salary");
+                salary = double.Parse(Console.ReadLine());
+                Console.WriteLine("pls Enter Employee Age");
+                age = int.Parse(Console.ReadLine());
+            } while (age < 0 && salary < 40000); 
         }
     }
 }
